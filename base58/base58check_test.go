@@ -7,7 +7,7 @@ package base58_test
 import (
 	"testing"
 
-	"go.mau.fi/util/base58"
+	"github.com/go-whatsapp/go-util/base58"
 )
 
 var checkEncodingStringTests = []struct {

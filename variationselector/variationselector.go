@@ -10,8 +10,9 @@ package variationselector
 
 import (
 	_ "embed"
-	"encoding/json"
 	"strings"
+
+	"github.com/goccy/go-json"
 )
 
 //go:generate ./generate.sh

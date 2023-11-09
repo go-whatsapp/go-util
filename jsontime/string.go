@@ -7,9 +7,10 @@
 package jsontime
 
 import (
-	"encoding/json"
 	"strconv"
 	"time"
+
+	"github.com/goccy/go-json"
 )
 
 func parseTimeString(data []byte, unixConv func(int64) time.Time, into *time.Time) error {

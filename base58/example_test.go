@@ -7,7 +7,7 @@ package base58_test
 import (
 	"fmt"
 
-	"go.mau.fi/util/base58"
+	"github.com/go-whatsapp/go-util/base58"
 )
 
 // This example demonstrates how to decode modified base58 encoded data.

@@ -10,7 +10,8 @@ import (
 	"encoding/binary"
 	"hash/crc32"
 	"strings"
-	"unsafe"
+
+	"github.com/go-whatsapp/go-util/byts"
 )
 
 const letters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
@@ -35,7 +36,7 @@ func String(n int) string {
 		return ""
 	}
 	str := StringBytes(n)
-	return *(*string)(unsafe.Pointer(&str))
+	return byts.UnsafeString(str)
 }
 
 func base62Encode(val uint32, minWidth int) []byte {
@@ -65,7 +66,7 @@ func Token(namespace string, randomLength int) string {
 	token[len(namespace)+randomLength+1] = '_'
 	checksum := base62Encode(crc32.ChecksumIEEE(token[:len(token)-7]), 6)
 	copy(token[len(token)-6:], checksum)
-	return *(*string)(unsafe.Pointer(&token))
+	return byts.UnsafeString(token)
 }
 
 // GetTokenPrefix parses the given token generated with Token, validates the checksum and returns the prefix namespace.

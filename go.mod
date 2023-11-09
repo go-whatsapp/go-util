@@ -1,9 +1,10 @@
-module go.mau.fi/util
+module github.com/go-whatsapp/go-util
 
 go 1.20
 
 require (
 	github.com/DATA-DOG/go-sqlmock v1.5.0
+	github.com/goccy/go-json v0.10.2
 	github.com/mattn/go-sqlite3 v1.14.17
 	github.com/rs/zerolog v1.30.0
 	github.com/stretchr/testify v1.8.4

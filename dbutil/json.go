@@ -2,8 +2,9 @@ package dbutil
 
 import (
 	"database/sql/driver"
-	"encoding/json"
 	"fmt"
+
+	"github.com/goccy/go-json"
 )
 
 // JSON is a utility type for using arbitrary JSON data as values in database Exec and Scan calls.

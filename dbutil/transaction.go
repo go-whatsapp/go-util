@@ -15,8 +15,8 @@ import (
 
 	"github.com/rs/zerolog"
 
-	"go.mau.fi/util/exerrors"
-	"go.mau.fi/util/random"
+	"github.com/go-whatsapp/go-util/exerrors"
+	"github.com/go-whatsapp/go-util/random"
 )
 
 var (
